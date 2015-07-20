@@ -1,0 +1,177 @@
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} 
+\usepackage[margin=2.5cm]{geometry}
+\geometry{a4paper}
+\usepackage{longtable}
+\usepackage{subfigure}
+\usepackage[normalem]{ulem}
+
+
+\usepackage{array,arydshln}
+%\setlength\dashlinedash{0.2pt}
+%\setlength\dashlinegap{4.5pt}
+%\setlength\arrayrulewidth{0.2pt}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
+
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+\usepackage{todonotes}
+\usepackage{menukeys}
+
+%----------------------------KODE START---------------------------------------
+%\usepackage{listings}
+%\usepackage{color}
+%\usepackage[usenames,dvipsnames,table]{xcolor}
+%\definecolor{gray}{rgb}{0.5,0.5,0.5}
+%\definecolor{mauve}{rgb}{0.58,0,0.82}
+%\lstset{
+%  basicstyle=\footnotesize,
+%  numbers=left,
+%  numberstyle=\tiny\color{gray},
+%  stepnumber=1,
+%  numbersep=10pt,
+%  backgroundcolor=\color{white},
+%  showspaces=false,               % show spaces adding particular underscores
+%  showstringspaces=false,         % underline spaces within strings
+%  showtabs=false,                 % show tabs within strings adding particular underscores
+%  frame=single,                   % adds a frame around the code
+%  rulecolor=\color{black},        
+%  tabsize=4,
+%  captionpos=b,                   % sets the caption-position to bottom
+%  breaklines=true,                % sets automatic line breaking
+%  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+%  title=\lstname,                   % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+%  keywordstyle=\color{mauve},          % keyword style
+%  commentstyle=\color{Maroon},       % comment style
+%  stringstyle=\color{BlueViolet},         % string literal style
+%  escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+%  morekeywords={*,...},              % if you want to add more keywords to the set
+%  deletekeywords={...}              % if you want to delete keywords from the given language
+%}
+%----------------------------KODE SLUT----------------------------------------
+
+
+\setlength\parindent{0pt} % Makes \noindent standard
+\usepackage{graphicx} 
+\usepackage{sidecap}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{float} 
+\usepackage{wrapfig} % Allows in-line images if needed
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\hypersetup{colorlinks=false,hidelinks, citecolor=black, urlcolor=black}
+\usepackage{csquotes}
+\usepackage{comment}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\usepackage[dot, autosize, outputdir="dotgraphs/"]{dot2texi}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\usepackage[titletoc]{appendix} % Names appendices "Appendix A"
+                                % instead of just A in Contents
+\usepackage[bottom]{footmisc}
+\usepackage{pdfpages}
+\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+
+
+%\usepackage{lmodern}
+\usetikzlibrary{arrows,automata}
+\usepackage{verbatim}
+
+\linespread{1.2} 
+\graphicspath{{./figures/}} 
+
+% fancy drawings
+\usepackage{pgf}
+\usepackage{epigraph}
+
+% \epigraphsize{\small}% Default
+\setlength\epigraphwidth{8cm}
+\setlength\epigraphrule{0pt}
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\epigraph}{\@epitext{#1}}{\itshape\@epitext{#1}}{}{}
+\makeatother
+
+%\usepackage{boxproof}
+%\usepackage{nomencl}
+\usepackage{natbib}
+
+\newcommand{\fasto}{\textsc{Fasto} }
+\newcommand{\mips}{\textsc{Mips} }
+\newcommand{\mars}{Mars }
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+%-----------------------------------------------------------------------------
+% HEADER AND FOOTER STUFF
+%-----------------------------------------------------------------------------
+\usepackage{fancyhdr}
+\usepackage{lastpage} % Making it possible to write ``Page x of y'' in the footer
+
+%\pagestyle{fancy}
+%\fancyhf{}
+% Header stuff below
+%\lhead{Jenny-Margrethe Vej} 
+%\chead{}
+%\rhead{rwj935} 
+% Footer stuff below
+%\cfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}} % To the left at the bottom
+
+%-----------------------------------------------------------------------------
+\begin{document}
+%\begin{titlepage}
+
+\begin{center}
+\textsc{\Large Smartphone Perspective on Sleeping Patterns}\\[0.5cm] 
+\textsc{\large Project description}\\[0.5cm] 
+
+%\vfill
+
+\emph{Author:}
+\\
+Jenny-Margrethe \textsc{Vej} - rwj935\\ 
+\vspace{10mm}
+
+{\large \today}\\[3cm] 
+\end{center}
+\vspace{-20mm}
+
+\section{Problem Statement}
+
+\section{Motivation}
+
+\section{Elaboration}
+
+\section{Learning Goals}
+	\begin{itemize}
+		\item 
+		\item 
+	\end{itemize}
+
+\bibliographystyle{plainnat}
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+
+
+%-----------------------------------------------------------------------------
+\end{document}
