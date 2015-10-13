@@ -1,0 +1,77 @@
+01: The methylxanthines are a group of chemicals that include theophylline and caffeine. Caffeine increases wakefulness by blocking the receptor for:
+
+*GABA
+*Acetylcholine
+*Serotonin
+*Adenosine - √
+*Hypocretin/orexin
+
+02: Donepezil is an acetylcholinesterase inhibitor used to treat memory losses that occur in patients with Alzheimer’s disease. The mechanism of action of donepezil is to increase acetylcholine levels. Donepezil given to healthy elderly volunteers:
+
+* decreases the latency to onset of REM sleep - √
+* decreases the latency to onset of NREM sleep
+* increases the amount of time spent in deep slow wave sleep
+* decreases the density of rapid eye movements
+* has no effect on sleep
+
+03: The complexity of the mammalian brain and the multiplicity of neurotransmitters and neuromodulators is a daunting challenge for efforts to understand how the brain controls sleep. As a general rule, however, there is consensus that most sleeping pills work by increasing transmission at:
+
+* muscarinic cholinergic receptors
+* dopamine transporters
+* hypocretin/orexin receptors
+* GABAA receptors - (√)
+* GABAB receptors
+
+04: True or False: One of the major neurochemical differences between wakefulness and REM sleep is that cholinergic tone in the cerebral cortex is relatively high during both wakefulness and REM sleep, whereas monoaminergic tone is relatively high during wakefulness and relatively low during REM sleep.
+
+* True
+* False (√)
+
+05: The reciprocal interaction model for REM sleep cycling is based on:
+
+*Mutual inhibitory GABAergic synaptic projections between REM-on and REM-off    
+*neuronal populations
+
+*Excitatory cholinergic synaptic projections from REM-on populations to REM-off populations, and inhibitory monoaminergic synaptic projections from REM-off populations to REM-on populations
+*
+*inhibitory GABAergic synaptic projections from REM-on populations to REM-off populations, and excitatory cholinergic synaptic projections from REM-off populations to REM-on populations
+
+*excitatory cholinergic synaptic projections from REM-on populations to REM-off populations, and excitatory monoaminergic synaptic projections from REM-off populations to REM-on populations
+
+* None of the above
+
+06: The development of sleep neurobiology is relatively recent. Before the neurobiological basis of sleep began to be understood, people with symptoms of excessive daytime sleepiness were stigmatized and considered to be “lazy”. One example where research using non-human animals has greatly benefited humans with sleep disorders is the discovery in dogs and mice that narcolepsy is related to a lack of:
+
+* Histamine
+* Dopamine
+* Hypocretin/orexin - √
+* Acetylcholine
+* GABA
+
+07: Adenosine is produced by cellular metabolism. Adenosine levels in most brain areas are greater during sleep than during wakefulness. One brain area in particular has been shown to be unique because it is the only region so far studied where adenosine levels increase continuously during extended periods of wakefulness. That brain area is the:
+
+* Cerebral cortex
+* Pontine reticular formation
+* Thalamus
+* Basal forebrain - √
+* Ventrolateral preoptic area
+
+08: True or False: Studies of mice show that eliminating a gene that contributes to the production of histamine increases sleep latency when the mice are placed in a new environment.
+
+* True
+* False - (√)
+
+09: Which of the brain regions listed below does not play a major role in sleep regulation?
+
+* Brainstem
+* Cerebellum (√)
+* Suprachiasmatic nucleus
+* Hypothalamus
+* Thalamus
+
+10:
+11:
+12:
+13:
+14:
+15:
