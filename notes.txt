@@ -1,0 +1,66 @@
+Data codin excell sheet - snak lige med Kimie
+
+
+Toss 'n' turns might influence how people think they sleep even though the sleep score is high
+
+En stor fil
+Sidste kolonne er typisk, hvad vi gerne vil forudsige
+
+Lav en teoretisk gennemgang af, hvad du vil - ping, on/off osv. og så machinelearning
+
+********************************************************************************
+
+On/Off
+
+Present when onlock 
+
+
+BUT HOW??
+On
+10 x present
+Off
+
+********************************************************************************
+
+TILFØJ SIDSTE PARTICIPANTS IMEI
+
+
+ARTICLE: Factors Influencing Quality of Experience of Commonly Used Mobile Applications
+
+
+INdledning: Explorative data, hypoteser efter variables er fundet, så ingen hypoteser i det her projekt
+
+Related work
+- Sleep (like the one in description)
+- Wearables? Different ones - how do they compare
+- The work I have now
+
+Methods: Methodology
+- Overview
+- Recruitment 
+- Sensor Log (mQoL)
+- Watch
+- DRM
+- Previously collected data via Social Fabric?
+
+EFTER METHODOLODY - EXP. 1 
+- Study participants
+- collected data
+- results
+-- sleep statistics
+-- phone usage stats
+-- ...
+-> Algorithm
+
+EXP. 2
+- Evaluation of algorithm 
+
+Discussion
+- Factors influencing the quality of data (what could go wrong and how did I manage? (hvad gik galt i opstarten osv. ))
+- Limitations
+- Phonetype? Technology related
+- Human related factors
+
+adherence 
+
+Design implications
