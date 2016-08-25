@@ -65,6 +65,7 @@
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
 \usepackage{wrapfig} % Allows in-line images if needed
 \usepackage{hyperref}
+\usepackage{url}
 \usepackage{cleveref}
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -73,7 +74,6 @@
 \usepackage{comment}
 
 \usepackage[dot, autosize, outputdir="dotgraphs/"]{dot2texi}
-\usepackage{url}
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{longtable}
@@ -179,7 +179,7 @@ Explorative data, hypotheses is made after variables is found, I'm looking to fi
 
 \newpage
 \section{Related Work}
-In this chapter I will assess state of the art work in three areas: sleep, wearables used for sleep monitoring and aspects on how smartphones can be used to assess sleep. The focus of this thesis is based on the smartphone part, but to understand the data I have collected, it is important to have a basic understanding on sleep and wearables also. 
+In this chapter I will assess state of the art work in three areas and its current methods for quality assessment: sleep, wearables used for sleep monitoring and aspects on how smartphones can be used to assess sleep. The focus of this thesis is based on the smartphone part, but to understand the data I have collected, it is important to have a basic understanding on sleep and wearables also. 
 
 \subsection{Sleep}
 This section is about sleep research in general. My focus is on healthy people. \\
@@ -212,7 +212,7 @@ REM sleep is often called ``active sleep'' and measuring it with an EEG test it 
 
 As the name indicates, NREM sleep is where the eyes are still. Going from stage N1 to N3 the brain waves becomes slower and more synchronised. Stage N3 is the deepest of the NREM stages, and is also referred to as ``deep'' or ``slow-wave'' sleep \cite{harvard}. As seen in figure \ref{fig:nrem} an EEG shows the high-amplitude, low-frequency waves and spindles opposite to the REM sleep illustrated in figure \ref{fig:rem}. \\
 
-When awakened from either REM or NREM sleep, people usually report less dreaming when awakened from NREM sleep than from REM sleep. 
+When awakened from either REM or NREM sleep, people usually report less dreaming when awakened from NREM sleep than from REM sleep \todo{find percentage or delete}. 
 
 \newpage
 \subsubsection{The Night Sleep Cycle}
@@ -228,7 +228,7 @@ The cycling during a night's sleep between the four stages is in a healthy adult
 
 The cycle continues during the night with more and more REM sleep and lesser N3 sleep, illustrated in figure \ref{fig:hyp}. According to Harvard Medical School \cite{harvard} no scientists know the reason for this cycling pattern during the night. 
 
-\subsubsection{Recommended Hours of Sleep}
+\subsubsection{Recommended Hours of Sleep}\todo{find other recommendations}
 The National Sleep Foundation updated their recommendations on how much sleep a person needs in 2015 based on a literature study. They used the RAND/UCLA appropriateness Method to define recommendations for sleep duration based on age \cite{duration}. Table \ref{tab:recommendation} shows a sample of the full table with recommendations on sleep periods from the National Sleep Foundation. 
 
 \begin{table}[H]
@@ -256,16 +256,20 @@ Older adults & 7 to 8 & 5-6 or 9 & Less than 5\\
 \end{footnotesize}
 \end{table}
 
+\subsection{Sleep Quality Assessment in Sleep Labs}
+Literature on sleep quality assessment in sleeping labs. 
+
 \subsection{Wearables}
-Research on wearables in general + wearables for sleep assessment - found these 4 articles/papers in my mailbox. Not sure if they are enough...\\
+Research on wearables in general + wearables for sleep assessment - Use only science papers...\\
 
 \url{http://www.aasmnet.org/jcsm/AcceptedPapers/JC-498-14.pdf}\\
-\url{https://www.linkedin.com/pulse/how-i-optimized-my-sleep-technology-bertalan-mesk\%C3\%B3-md-phd?trk=hb\_ntf\_MEGAPHONE\_ARTICLE\_POST}\\
 \url{http://www.huffingtonpost.com/dr-christopher-winter/sleep-tips_b_4792760.html}
 \url{https://digital.lib.washington.edu/researchworks/handle/1773/26199}
 
 \newpage
 \subsection{Assesment of Sleep from Smartphones}
+\todo[inline]{Some introduction about that we use our smartphones all the time, next to bed, as alarms etc. Reference Dey-wac Ubicomp 11'}
+
 In this section, Table \ref{tab:tableApproach} lists the keywords from articles related to sleep about their \textit{goal}, what devices and sensors they used to get \textit{input}, their \textit{procedures}, what their \textit{output} was, how many \textit{people} they had participating in their experiment, and finally, for how long their study was running. Papers in Table \ref{tab:tableApproach} are as follows. \\
 
 In May 2012 Andrew T. Campbell and Computer Science Department at Dartmouth College released an application called BeWell on Google Play \cite{bewellDartmouth}. 
@@ -295,14 +299,14 @@ SMS & x & & 	\\
 Stationary & &  & x\\
 	\hline
 	\end{tabular}
-	\caption{Sensors used in the three mentioned studies - listed under the year the study was presented.}
+	\caption{Sensors used in the three mentioned BeWell studies - listed under the year the study was presented.}
 	\label{tab:sensors}
 \end{footnotesize}
 \end{wraptable}
 
 The application is a smartphone application made to monitor the smartphone owners everyday behaviour, hence potentially promote the wellbeing of that owner. The application is made for Android smartphones and uses the built in sensors in the phone to collect activities, ``that impact physical, social and mental wellbeing namely, sleep, physical activity, and social interactions...''\cite{beWell}. The sleep algorithm in the application was presented in a paper two years later by Tanzeem Choudhury, one of the people behind BeWell. The article included their pseudocode for calculating sleep duration from persons usage of their smartphone \cite{bewellSleep}. The aim of the study was to investigate if smartphone usage patterns are indicative of discrepancies in circadian rhythms. The data collection was running for 97 days and was done by 9 participants. Besides the smartphone application each participant was regularly interviewed and asked to fill out a sleep journal. The sensors used in the application is listed in Table \ref{tab:sensors}.\\ 
 
-A similar study was presented in 2014 \cite{toss} also using a mobile phone application to learn how and when people sleep. This study is the biggest study regarding number of participants mentioned here and ran for one month. The study's objective was to investigate how well a commodity smartphone sense and model sleep and sleep quality. They identified sleep quality using the Pittsburgh Sleep Quality Index (PSQI) \cite{quality}. The study collected data from 27 participants with a wide range of sleep contexts.  The participants filled out a sleep journal and the sensors used from their smartphones is illustrated in Table \ref{tab:sensors}. \\
+A similar study was presented in 2014 by Jun-Ki Min et. al.\cite{toss} also using a mobile phone application to learn how and when people sleep. This study is the biggest study regarding number of participants mentioned here and ran for one month. The study's objective was to investigate how well a commodity smartphone sense and model sleep and sleep quality. They identified sleep quality using the Pittsburgh Sleep Quality Index (PSQI) \cite{quality}. The study collected data from 27 participants with a wide range of sleep contexts.  The participants filled out a sleep journal and the sensors used from their smartphones is illustrated in Table \ref{tab:sensors}. \\
 
 A comparison study on two smartphone models, a wrist mounted device called Jawbone Up and a Zeo Sleep Manager Pro headband was described in a paper from 2013 made by Tanzeem Choudhury and Andrew T. Campbell et. al. \cite{compare}. This study aimed to investigate if a smartphone only approach can measure sleep duration accurately enough, and for that they had 8 participants collecting data for a week. This study also used sleep journals and the sensors used in their smartphone application is listed in Table \ref{tab:sensors}. 
 
@@ -318,9 +322,9 @@ For an overview purpose all three studies are illustrated in Table \ref{tab:tabl
 	\hline
 	(2012) Are smartphone usage patterns indicative of discrepancies in circadian rhythms? & Sleep journals\newline Interviews \newline Smartphone  & Machine Learning (only data between 10PM and 7AM) & 23.8 min from actual sleep duration. & 7 males + \newline 2 females. \newline Undergraduate students between 19 and 25 years of age. & 97 days = \newline 5 $\times$ 4 $\times$ 5 weeks (Fall, Winter and Spring)\\
 	\hline
-	(2014) How well can a commodity smartphone sense and model sleep and sleep quality? & Sleep journals\newline Smartphone & Machine Learning & $\pm$ 49 minutes from actual sleep duration & 8 males + \newline 19 females. \newline Ranged in age from 20 to 59 and approximately 80 \% of participants reported working or going to school during daylight hours. & One month \\
-	\hline
 	(2013) Can a smartphone only approach measure sleep duration accurately enough? & Zeo Headband\newline Jawbone Wristband\newline Smartphone\newline Sleep journals & Machine Learning and user friendliness & $\pm$ 42 minutes from actual sleep duration. & 8 males. \newline Visiting scholars or graduate students between 23 and 31 years of age. (Computer Science or Material Engineering) & One week \\
+	\hline
+	(2014) How well can a commodity smartphone sense and model sleep and sleep quality? & Sleep journals\newline Smartphone & Machine Learning & $\pm$ 49 minutes from actual sleep duration & 8 males + \newline 19 females. \newline Ranged in age from 20 to 59 and approximately 80 \% of participants reported working or going to school during daylight hours. & One month \\
 	\hline 
 	\end{tabular}
 	\caption{State of the art - related work}
@@ -335,135 +339,166 @@ For an overview purpose all three studies are illustrated in Table \ref{tab:tabl
 Meta introduction to the chapter
 
 \subsection{Overview}
-The demographic information on the participants in this study was acquired with a survey they filled out online before the data collection started. Hereafter a smartphone application from mQoL Living Lab in Geneva was installed on the participants phones. When installing the application, the participants was also set up with a smartwatch from BASIS, used as a baseline. In the beginning and the middle of the data collection period the participants was asked to reconstruct their previous day using the Day Reconstruction Method (DRM). All subjects have filled out at least 6 DRM's. 
-
-\subsection{Timeline}
-This project was initiated in September 2015 as a part-time master thesis, ending in November 2016. In October 2015 the recruitment process was started, and in November the first 9 participants started collecting data with four weekly DRM sessions. In December the 10th subject started and both in January and February a participant dropped out. In April another four weekly DRM sessions started, and in July the data collection ended and data analysis started. For a more detailed time plan, see Appendix \ref{sec:experiment1}, Table \ref{tab:timeplan}. 
-
-\subsection{Recruitment Process}
-The target group for the study was students with Android smartphones with at least Android software version 4.4 to run the mQoL application, and Bluetooth version 2 or above to be able to connect to the BASIS peak application. The social network Facebook was used to get in contact with potential participants and hereafter most contact was happening via email. Ten subjects were found in the first round, but unfortunately one did not have a smartphone fulfilling the requirements after all, and it took around four weeks to find a substitute. A more detailed description of the participants can be seen in Section \ref{sec:participants}.
+The demographic information on the participants in this study was acquired with an entry survey they filled out online before the data collection started. Hereafter a smartphone application from mQoL Living Lab in Geneva \cite{mQOL} was installed on the participants phones. When installing the application, the participants was also set up with a smartwatch from BASIS, used as a baseline. In the beginning and the middle of the data collection period the participants was asked to reconstruct their previous day using the Day Reconstruction Method (DRM) \cite{drm}. All subjects have filled out at least 6 DRM's. 
 
 \subsection{Methods}
 Meta introduction to this sub section. 
 
 \subsubsection{Entry Survey}
-Before each participant was allowed to install the mQoL application and get their smartwatch, they filled out an online survey. The survey contained questions about studies, workload, sleep, phone and phone usage, and demographic information. The full survey can be seen in Appendix \ref{sec:survey}. 
+The survey contained questions about studies, workload, sleep, phone and phone usage, and demographic information. The full survey can be seen in Appendix \ref{sec:survey}. 
 
 \subsubsection{Smartphone Sensor Log (mQoL)}
-Variables
+Variables (from paper mQoL and from own data + data model PDF)
 
 \subsubsection{Smartwatch}
-In June 2015 a wearable device called Fitbit Surge was tested as an alternative for the BASIS Peak smartwatch. The Fitbit Surge is a fitness watch that can track GPS, heart rate, statistics for activity during the day and sleep \cite{fitbit}. The purpose of this test was to get insight into what was possible to measure from a watch like this, and to test the accuracy of the sleep detection. It was also investigated how detailed the data extracted from the watch could be.  \\
+In June 2015 a wearable device called Fitbit Surge was tested as an alternative for the BASIS Peak smartwatch. The Fitbit Surge is a fitness watch that can track GPS, heart rate, statistics for activity during the day and sleep \cite{fitbit}. The purpose of this test was to get insight into what was possible to measure from a watch like this, and to verify the accuracy of the sleep detection. It was also investigated how detailed the data extracted from the watch could be.  \\
 
-According to Fitbit's developer site \cite{fitbit_dev}, it should be possible to extract the data needed for this study, but it required an authentication between an application that will use the API and Fitbit. Fitbit only offers the possibility to export data from a user login at the online dashboard, all users have available at Fitbit's website. Unfortunately, if exporting from the website, the CSV file with the data is only containing the total number of minutes asleep, and the total numbers of minutes awake, which is also what Fitbit illustrates with their example on their website \url{dev.fitbit.com} explaining the API \cite{fitbit_dev}. A more detailed view on the data from the watch was needed for this study, which is why the BASIS Peak was chosen.\\
+According to Fitbit's developer site \cite{fitbit_dev}, it should be possible to obtain the data needed for this study, but it required an authentication between an application that will use the API and Fitbit. Fitbit only offers the possibility to export data from a user log in at the online dashboard; all users have available at Fitbit's website. Unfortunately, if exporting from the site, the CSV file with the data is only containing the total number of minutes asleep, and the total numbers of minutes awake, which is also what Fitbit illustrates with their example on their website \url{dev.fitbit.com} explaining the API \cite{fitbit_dev}. A more detailed view of the data from the watch was needed for this study, which is why the BASIS Peak was chosen.\\
 
-Basis Peak is a fitness and sleep tracker \cite{basis}. A comparison between the two watches was made to see the differences in how they measured sleep, if any. Both watches was tested at the same time by one person on the same arm over a three day period. After that, the BASIS watch was tested independently. In Figure \ref{fig:pilot0} a screenshot of the visualisation from the first night is shown, Figure \ref{fig:basis0} is showing the Basis application for the smartphone and Figure \ref{fig:fitbit0} the Fitbit view. The three day period gave one example of a night out including alcohol, and a normal evening - the first night is the night out. 
+Basis Peak is a fitness and sleep tracker \cite{basis}. A comparison between the two watches was made to see the differences in how they measured sleep if any. Both watches was tested at the same time by one person on the same arm over a three-day period. After that, the BASIS watch was tested independently. In Figure \ref{fig:pilot0} a screenshot of the visualisation from the first night is shown, Figure \ref{fig:basis0} is showing the Basis application for the smartphone and Figure \ref{fig:fitbit0} the Fitbit view. The three-day period gave one example of a night out including alcohol, and a typical evening - the first night is the night out. 
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{24-10-basis}
-        \caption{BASIS mobilephone application}
-        \label{fig:basis0}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-      %(or a blank line to force the subfigure onto a new line)
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{24-10-fitbit}
         \caption{Fitbit mobilephone application}
         \label{fig:fitbit0}
     \end{subfigure}
-    \caption{BASIS vs. Fitbit - night between 23-10-2015 and 24-10-2015}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{24-10-basis}
+        \caption{BASIS mobilephone application}
+        \label{fig:basis0}
+    \end{subfigure}
+    \caption{Fitbit vs. BASIS - night between 23-10-2015 and 24-10-2015}
     \label{fig:pilot0}
 \end{figure}
 
-Figure \ref{fig:pilot1} shows the results of a more normal night, the night between a Sunday and Monday. Comparing the visualisations in both Figure \ref{fig:pilot0} and Figure \ref{fig:pilot1} it is clear that the two watches does not measure the exact same time for sleeping. It is also clear that the Basis Peak is measuring in more details than the Fitbit Surge. \\
+Figure \ref{fig:pilot1} shows the results of a more regular night, the night between a Sunday and Monday. Comparing the visualisations in both Figure \ref{fig:pilot0} and Figure \ref{fig:pilot1} it is clear that the two watches does not measure the exact same time for sleeping\todo{add the real value to compare}. It is also evident that the Basis Peak is measuring in more details than the Fitbit Surge. \\
 
-Both watches have a second view in their application for the smartphones, a more detailed view. In Figure \ref{fig:pilot2} the second type of view is illustrated, and it is clear to see that Fitbit's view is far less detailed than the BASIS view. BASIS adds a timeline for sleep to visualise when REM, interruptions and deep sleep occurred during the night. The difference between BASIS and Fitbit is illustrated in Figure \ref{fig:pilot1}.
+Both watches have a second view in their application for the smartphones, a more detailed view. In Figure \ref{fig:pilot2} the second type of view is illustrated, and it is clear to see that Fitbit's view is far less detailed than the BASIS view. BASIS adds a timeline for sleep to visualise when REM, interruptions, and deep sleep occurred during the night. The difference between BASIS and Fitbit is illustrated in Figure \ref{fig:pilot1}.
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{26-10-basis}
-        \caption{BASIS mobilephone application}
-        \label{fig:basis1}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-      %(or a blank line to force the subfigure onto a new line)
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{26-10-fitbit}
         \caption{Fitbit mobilephone application}
         \label{fig:fitbit1}
     \end{subfigure}
-    \caption{BASIS vs. Fitbit - night between 25-10-2015 and 26-10-2015, view 1}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{26-10-basis}
+        \caption{BASIS mobilephone application}
+        \label{fig:basis1}
+    \end{subfigure}
+    \caption{Fitbit vs. BASIS - night between 25-10-2015 and 26-10-2015, view 1}
     \label{fig:pilot1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{26-10-basis1}
-        \caption{BASIS mobilephone application}
-        \label{fig:basis2}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-      %(or a blank line to force the subfigure onto a new line)
-    \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{26-10-fitbit1}
         \caption{Fitbit mobilephone application}
         \label{fig:fitbit2}
     \end{subfigure}
-    \caption{BASIS vs. Fitbit - night between 25-10-2015 and 26-10-2015, view 2}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{26-10-basis1}
+        \caption{BASIS mobilephone application}
+        \label{fig:basis2}
+    \end{subfigure}
+    \caption{Fitbit vs. BASIS - night between 25-10-2015 and 26-10-2015, view 2}
     \label{fig:pilot2}
 \end{figure}
 
-Extracting data from the BASIS watch was not possible through the user login at the website as first initiated, and the BASIS support team could not help either. Fortunately there exists a third party script written in Python called Basis Retriever \cite{basis_retriever}. With that, it is possible to extract a CSV file from a given user that contains detailed information about the users sleep at a particular day. It is possible to download both for a single day, but also a summary for an entire month. Appendix \ref{sec:subset} contains a subset of how a CSV file with data from a single day is looking. \\
+Extracting data from the BASIS watch was not possible through the user login at the website as first initiated, and the BASIS support team could not help either. Fortunately, there exists a third party script written in Python called Basis Retriever \cite{basis_retriever}. With that, it is possible to extract a CSV file from a given user that contains detailed information about the users sleep on a particular day. It is possible to download both for a single day, but also a summary for an entire month. Appendix \ref{sec:subset} contains a subset of how a CSV file with data from a single day is looking. \\
 
-Because the BASIS Peak watch is more precise in measuring sleep than the Fitbit Surge, and because of Basis Retriever, it was decided that the BASIS watch was the best of the two, hence the one used in the study. 
+Because the BASIS Peak watch is more precise\todo{add how it is determined} in measuring sleep than the Fitbit Surge, and because of Basis Retriever, it was decided that the BASIS watch was the best of the two, hence the one used in the study. \todo[inline]{Skriv om de der straps og over heeting}
 
 \subsubsection{Day Reconstruction Method}
+
+\subsection{Timeline}
+This project was initiated in September 2015 as a part-time master thesis, ending in November 2016. In October 2015 the recruitment process was started, and in November the first 9 participants started collecting data with four weekly DRM sessions. In December the 10th subject started and both in January and February a participant dropped out. In April another four weekly DRM sessions started, and in July the data collection ended and data analysis started. For a more detailed time plan, see Table \ref{tab:timeplan}. 
+
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{| c | c |}
+	\hline
+	\textbf{Month} & \textbf{Task} \\
+	\hline
+	September 2015 & Project initiated\\
+	October 2015 & Literature study and recruitment process start\\
+	November 2015 & Participant S11-15 and S17-20 starts collecting data\\
+	December 2015 & Participant S16 starts collecting data\\
+	January 2016 & Labelling first batch of DRM's \\
+	February 2016 & \\
+	March 2016 & Preparing for next round of DRM's \\
+	April 2016 & Participants fills out 4 new DRM's\\
+	May 2016 & Labelling second batch of DRM's\\
+	June 2016 & \\
+	July 2016 & Data collection ends and data analysis starts\\
+	August 2016 & \\
+	September 2016 & \\
+	October 2016 & \\
+	November 2016 & Hand in on November 11\\
+	\hline
+	\end{tabular}
+	\caption{Monthly based timeplan for project.}
+	\label{tab:timeplan}
+\end{footnotesize}
+\end{table}
+
+
+
+\subsection{Recruitment Process}
+The target group for the study was students with Android smartphones with at least Android software version 4.4 to run the mQoL application, and Bluetooth version 2 or above to be able to connect to the BASIS peak application. The social network Facebook was used to get in contact with potential participants and hereafter most contact was happening via email. Ten subjects were found in the first round, but unfortunately one did not have a smartphone fulfilling the requirements after all, and it took around four weeks to find a substitute. A more detailed description of the participants can be seen in Section \ref{sec:participants}.
 
 \subsection{Previously Collected Data via Social Fabric}
 This section might be deleted
 
-	
+\newpage	
 \section{Experiment \# 1}
 \label{sec:experiment1}
-Meta introduction about this chapter
+This chapter is about the participants and the data collected from November to the end of March. The quality of the data was investigated, and during this investigation interesting questions came up. From the DRM's and the initial survey it was seen that some participants worked out more than others, and it was researched if participants slept better or worse after a work out compared to other days and if the subjects who worked out in general slept better than the subjects who did not work out. Statistics was made to see if there was difference in sleep in weekdays and weekends/holidays. It was also investigated if exam periods influenced the sleep quantity and quality and if master students had different sleep patterns than bachelor students, and if being in a relationship seems to affect the sleeping patterns. 
+\todo[inline]{these things should of course also be investigated for the second period and compared with the first one}
+
 
 \subsection{Participants} \label{sec:participants}
-The participants consists of 10 students primarily from University of Copenhagen (UCPH), and a single student from the IT University. They are all between the age of 18 and 30, ... see Table \ref{tab:partOv}\\
-
-\todo[inline]{Write something more... Figure out what exactly is needed}
+The participants consists of 10 students primarily from University of Copenhagen (UCPH), and a single student from the IT University. They are all between the age of 18 and 30, and no one have children. In Table \ref{tab:partOv} an overview of the participant and their living conditions is shown. S11 lived with 2 friends before he moved in together with his girlfriend. S14 finished his master one month before the data collection period stopped and as seen in Figure \ref{fig:timeline} S19 dropped out of the experiment in January 2016 because the strap from the watch gave her a rash, and S18 dropped out in February because he lost his phone and bought an iPhone instead of an Android smartphone which made him unable to run the application from mQoL. In June S13 decided not to wear the watch any more due to the recommendations send out from BASIS regarding the heating issues. 
 
 \begin{table}[H]
 \center
 \begin{footnotesize}
 	\begin{tabular}{| c | c | c | c | c | c | c | c | c | c |}
 	\hline
-	\textbf{S\#} & \textbf{Gender} & \textbf{Age} & \textbf{Study} & \textbf{Civil} & \textbf{Living-}\\
+	\textbf{S\#} & \textbf{Gender} & \textbf{Age} & \textbf{University} & \textbf{Civil} & \textbf{Living-}\\
 	 & \textbf{} & \textbf{} & \textbf{} & \textbf{status} & \textbf{conditions} \\
 	
 	\hline
-	S11 & Male & 25-30 & Physics, UCPH & Relationship & With girlfriend from January 1, 2016 \\
+	S11 & Male & 25-30 & UCPH & Relationship & With girlfriend from January 1, 2016 \\
 	\hline
-	S12 & Male & 18-24 & Computer Science, UCPH & Relationship & Apartment with friend\\
+	S12 & Male & 18-24 & UCPH & Relationship & Apartment with friend\\
 	\hline
-	S13 & Male & 18-24 & Computer Science, UCPH & Single & Alone \\
+	S13 & Male & 18-24 & UCPH & Single & Alone \\
 	\hline
-	S14 & Male & 25-30 & Games \& Technology, ITU & Relationship & Apartment with friend \\
+	S14 & Male & 25-30 & ITU & Relationship & Apartment with friend \\
 	\hline
-	S15 & Male & 18-24 & Computer Science, UCPH & Single & With parents  and 1 sibling\\
+	S15 & Male & 18-24 & UCPH & Single & With parents  and 1 sibling\\
 	\hline
-	S16 & Male & 18-24 &  Computer Science, UCPH & Single & Apartment with friend\\
+	S16 & Male & 18-24 & UCPH & Single & Apartment with friend\\
 	\hline
-	S17 & Male & 18-24 & Computer Science, UCPH & Single & With parents and 2 siblings \\
+	S17 & Male & 18-24 & UCPH & Single & With parents and 2 siblings \\
 	\hline
-	S18 & Male & 18-24 & Computer Science, UCPH & Single & In a collective\\
+	S18 & Male & 18-24 & UCPH & Single & In a collective\\
 	\hline
-	S19 & Female & 18-24 & Computer Science, UCPH & Relationship & With parents and 1 sibling\\
+	S19 & Female & 18-24 & UCPH & Relationship & With parents and 1 sibling\\
 	\hline
-	S20 & Female & 18-24 & Pharmacy, UCPH & Relationship & With boyfriend\\
+	S20 & Female & 18-24 & UCPH & Relationship & With boyfriend\\
 	\hline
 	\end{tabular}
 	\caption{Participants overview}
@@ -471,10 +506,46 @@ The participants consists of 10 students primarily from University of Copenhagen
 \end{footnotesize}
 \end{table}
 
+Only two of the participants was master students, S11 and S14. S11 was writing on his dissertation thesis during the entire data collecting period (November to July) and S14 started his thesis work in February 2016 and finished it in mid June. In Table \ref{tab:part1v} it is shown what the participants studied at the time of the data collection, what level they were at, how many month left of the current level, how many hours they estimate they study every week, how many hours per week they work at a student job, and how many hours they work out each week. This information was retrieved by the initial survey.  
+
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{| c | c | c | c | c | c | c | c |}
+	\hline
+	\textbf{S\#} & \textbf{Study} & \textbf{Level} & \textbf{Month left} & \textbf{Study} & \textbf{Work} & \textbf{Work out}\\
+	\hline
+	S11 & Physics & Master & & & &\\
+	\hline
+	S12 & Computer Science & Bachelor & & & &\\
+	\hline
+	S13 & Computer Science & Bachelor & & & &\\
+	\hline
+	S14 & Games \& Technology & Master & & & &\\
+	\hline
+	S15 & Computer Science & Bachelor & & & &\\
+	\hline
+	S16 & Computer Science & Bachelor & & & &\\
+	\hline
+	S17 & Computer Science & Bachelor & & & &\\
+	\hline
+	S18 & Computer Science & Bachelor & & & &\\
+	\hline
+	S19 & Computer Science & Bachelor & & & &\\
+	\hline
+	S20 & Pharmacy & Bachelor & & & &\\
+	\hline
+	\end{tabular}
+	\caption{Participants workload overview in hours per week and line of study}
+	\label{tab:part1v}
+\end{footnotesize}
+\end{table}
 
 
 \subsection{Collected Data Summary}
-\todo{write real text}
+This summary is for the data period ending at March 31, 2016, 11:59:59 PM unless a participant dropped out before that time. \\
+
+In Figure \ref{fig:timeline} a timeline over the entire data collection period is illustrated showing when the participants started, dropped out and when exams periods and holidays was during this time. Participant numbers written in green symbols when the participant started collecting data, and the red is illustrating when the participant decided to drop out of the experiment. 
 
 \begin{figure}[H]
     \centering
@@ -483,20 +554,20 @@ The participants consists of 10 students primarily from University of Copenhagen
         \label{fig:timeline}
 \end{figure}
 
-General end time for this part is 31-03-2016, 11:59:59 PM unless participant dropped out before. \\
+Not researching on the quality of the data but only the quantity, the amount of minutes from when a participant started until March 31 was calculated. Table \ref{tab:totalMinutesWatch} is showing how many minutes with any kind of data the Basis Retriever could export to the daily .CSV files from the watches. Table \ref{tab:totalMinutesWatch} is not differencing between what kind of data the columns contains, only if there is data in them. Later on the results from the quality is illustrated. 
 
-- OBS: Table \ref{tab:totalMinutesWatch} is only showing hoe many minutes with some kind of data in the columns from the .csv files from the watches. For example is it also counting if the column shows a zero. Later on we will see results containing the real data with average measurements etc. \\
-
-- S11 data started 18-11-2015, 05:38:00 PM\\
-- S12 data started 11-11-2015, 04:11:00 PM\\
-- S13 data started 10-11-2015, 11:54:00 AM\\
-- S14 data started 15-11-2015, 04:56:00 PM\\
-- S15 data started 11-11-2015, 02:32:00 PM\\
-- S16 data started 15-12-2015, 01:08:00 PM\\
-- S17 data started 09-11-2015, 03:59:00 PM\\
-- S18 data started 09-11-2015, 04:32:00 PM - stopped end of January because of new phone (iPhone). I have put in February 5 as end day because I don't have the specific day he lost his phone, but I have watch data until here.\\
-- S19 data started 11-11-2015, 04:30:00 PM - stopped officially during January because of allergic reactions from watch. I have put in December 31 as end day because I don't have the specific day she decided not to wear watch any more, and the data from January is close to 0. \\
-- S20 data started 10-11-2015, 01:17:00 PM
+\begin{itemize}
+	\item S11 data started 18-11-2015, 05:38:00 PM
+	\item S12 data started 11-11-2015, 04:11:00 PM
+	\item S13 data started 10-11-2015, 11:54:00 AM
+	\item S14 data started 15-11-2015, 04:56:00 PM
+	\item S15 data started 11-11-2015, 02:32:00 PM
+	\item S16 data started 15-12-2015, 01:08:00 PM
+	\item S17 data started 09-11-2015, 03:59:00 PM
+	\item S18 data started 09-11-2015, 04:32:00 PM - stopped end of January because of new phone (iPhone). February 5 is marked as end day, because data from the watch ended here
+	\item S19 data started 11-11-2015, 04:30:00 PM - stopped officially during January because of allergic reactions from watch. December 31 as end day because the data from January is close to 0
+	\item S20 data started 10-11-2015, 01:17:00 PM
+\end{itemize}
 
 \begin{table}[H]
 \center
@@ -622,7 +693,7 @@ Looking at the data I have collected from the participants, it was clear that no
 
 
 \section{Experiment \# 2}
-Evaluation of algorithm 
+Evaluation of algorithm + another set of collected data summary summarising the data from the complete period and the second part so it is possible to compare first part with second part. I also want to see if there is any difference in how long people sleep - my guess is, that people sleep lesser when it gets hotter and lighter outside. I would like to see if the data agrees on me on this. In better words - does the students circadian rhythm change when it gets warmer and lighter outside?
 
 %The user experiment was running from November 2015 to June 2016 and included ten participants. The first four weeks for each participant was used to set up the smartphone and the BASIS watch. Also I met with each participant once a week for all four weeks to ask questions if any to the collected data, and to reconstruct a complete day for each of the four weeks. These four weeks is also referred to as the first stage or the first user experiment. \\
 
@@ -657,7 +728,9 @@ Evaluation of algorithm
 - Factors influencing the quality of data (what could go wrong and how did I manage?\\
 - Limitations\\
 - Technology used\\
-- Human related factors (adherence)
+- Human related factors (adherence)\\
+
+In chapter 2 I ended a paragraph writing: ``giving people three highly complicated and individually diverse factors influencing and affecting our timing and quality of sleep: our circadian system, a homeostatic oscillator, and our social time.'' Now discuss what I found in my population with relation to these factors.
 
 \section{Design Implications}
 Provide design implications for a digital solution for mobilephones to help combat unhealthy behaviour in students sleeping patterns
@@ -666,7 +739,7 @@ Provide design implications for a digital solution for mobilephones to help comb
 
 
 \newpage
-\addcontentsline{toc}{section}{References}
+\addcontentsline{toc}{section}{References}\todo{check if 1 and 11 have a paper instead. If not, the tilde should be fixed in 11}
 
 %\bibliographystyle{plainnat}
 \bibliographystyle{unsrt}
@@ -674,38 +747,7 @@ Provide design implications for a digital solution for mobilephones to help comb
 
 \newpage
 \appendix
-\section{Timeplan} \label{sec:experiment1}
-\begin{table}[H]
-\center
-\begin{footnotesize}
-	\begin{tabular}{| c | c |}
-	\hline
-	\textbf{Month} & \textbf{Task} \\
-	\hline
-	September 2015 & Project initiated\\
-	October 2015 & Literature study and recruitment process start\\
-	November 2015 & Participant S11-15 and S17-20 starts collecting data\\
-	December 2015 & Participant S16 starts collecting data\\
-	January 2016 & Labelling first batch of DRM's \\
-	February 2016 & \\
-	March 2016 & Preparing for next round of DRM's \\
-	April 2016 & Participants fills out 4 new DRM's\\
-	May 2016 & \\
-	June 2016 & \\
-	July 2016 & Data collection ends and data analysis starts\\
-	August 2016 & \\
-	September 2016 & \\
-	October 2016 & \\
-	November 2016 & Hand in on November 11\\
-	\hline
-	\end{tabular}
-	\caption{Monthly based timeplan for project.}
-	\label{tab:timeplan}
-\end{footnotesize}
-\end{table}
-
-\newpage
-\section{Survey} \label{sec:survey}
+\section{Entry Survey} \label{sec:survey}
 
 %\includepdf[pages=1-9, pagecommand={}, scale=0.5]{survey.pdf}
 
