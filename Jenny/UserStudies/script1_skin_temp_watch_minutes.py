@@ -1,7 +1,7 @@
 import os
 import glob
 
-personfolder = 'S20'
+personfolder = 'S11'
 
 pathper = os.getcwd() +'/'+personfolder+'/'
 
@@ -25,6 +25,29 @@ patharr.append('03March')
 
 total = 0
 
+#Initial loop for one file
+# Open file (day)
+csvFile = open(pathper + '11November' + '/' + '2016-01-01_basis_metrics.csv',r)
+column = "1"
+
+lines = csvFile.readlines()
+AverageArr = [None]*len(lines[0].split(',')
+print (AverageArr)
+for line in lines:
+    #Skips empty lines
+    if len(line) >0: 
+        temparr = line.split(',')
+        if temparr[0] != "datetime" and temparr[0] != ""
+            varVal = varVal + temparr[column]
+        
+if notFound :
+    finalstring = finalstring + line
+    notFound = False
+elif temparr[0] !="datetime" and temparr[0] != "":
+    finalstring = finalstring + line
+
+
+'''
 for month in patharr:
     print("Current month: " + month)
     path = pathper + month
@@ -77,4 +100,5 @@ for month in patharr:
     print ("Average in Fahrenheit: " + str(averageF))
     print ("Average in Celsius: " + str(averageC))
     print ("")
-print ("total average: " + str(total / len(patharr))) 
+print ("total average: " + str(total / len(patharr)))
+'''
