@@ -1,7 +1,10 @@
 import os
 import glob
+import csv
+import matplotlib.pyplot as plt
+import numpy as np
 
-personfolder = 'S11'
+personfolder = 'S12'
 
 pathper = os.getcwd() +'\\'+personfolder+'\\'
 
@@ -23,59 +26,95 @@ patharr.append('01January')
 patharr.append('02February')
 patharr.append('03March')
 
-#total = 0
-#averageCounter = 0
-
 averageColumn = 1
 
-firstLineAdd = True
+averageList = list()
 
+#ConstVariables
+PersonTotal = 0
+personAverageCounter = 0
+firstLineAdd = True
 finalString = ""
 
+for month in patharr:
+    monthVal = 0.0
+    monthCounter = 0.0
+    path = pathper + month
+    for filename in glob.glob(os.path.join(path,'*csv')):
+        csvFile = open(filename,'r')
 
-monthVal = 0.0
-monthCounter = 0.0
-path = pathper + patharr[0]#month
-for filename in glob.glob(os.path.join(path,'*csv')):
-    csvFile = open(filename,'r')
+        dayVal = 0.0
+        dayCount = 0.0
 
-    dayVal = 0.0
-    dayCount = 0.0
+        #read all the lines in the file and create an average for the month
+        #add the lines to the final file for use in graphs
+        lines = csvFile.readlines()
+        for line in lines:
+            #Skips empty lines
+            if len(line) >0:
+                temparr = line.split(',')
+                # Adds the first line for the columns to have a header
+                if firstLineAdd:
+                    finalString = finalString + line
+                    firstLineAdd = False
+                    print(temparr[averageColumn])
+                #skips the first line in the file and empty lines
+                if temparr[0] != "datetime" and temparr[0] != "":
+                    #first build final string
+                    finalString = finalString + line
+                    if temparr[averageColumn] != "":
+                        #Construct the average
+                        if averageColumn == 1:
+                            dayVal = dayVal + (float(temparr[averageColumn])-32)/1.8
+                        else :
+                            dayVal = dayVal + float(temparr[averageColumn])
+                        dayCount = dayCount +1
+                #end tempArr
+        #end line
+        if dayCount != 0:
+            dayAverage = dayVal/dayCount
+        else :
+            dayAverage = 0
+        #List for plot
+        #averageList.append(dayVal)
+        averageList.append(dayAverage)
 
-    #read all the lines in the file and create an average for the month
-    #add the lines to the final file for use in graphs
-    lines = csvFile.readlines()
-    for line in lines:
-        #Skips empty lines
-        if len(line) >0:
-            # Adds the first line for the columns to have a header
-            if firstLineAdd:
-                finalString = finalString + line
-                firstLineAdd = False
-            temparr = line.split(',')
-            #skips the first line in the file and empty lines
-            if temparr[0] != "datetime" and temparr[0] != "":
-                #first build final string
-                finalString = finalString + line
-                if temparr[averageColumn] != "":
-                    #Construct the average
-                    dayVal = dayVal + float(temparr[averageColumn])
-                    dayCount = dayCount +1
-            #end tempArr
-    #end line
-    dayAverage = dayVal/dayCount
-    monthVal = monthVal + dayVal
-    monthCounter = monthCounter + dayCount
-    print("Average for " + filename + ": " + str(dayAverage))
-monthAverage = monthVal/monthCounter
-print("Average for " + patharr[0] + ": " + str(monthAverage))        
-                    
-                    
-                
-                
+        monthVal = monthVal + dayVal
+        monthCounter = monthCounter + dayCount
+        print("Average for day " + filename.split('\\')[len(filename.split('\\'))-1] + ": " + str(dayAverage))
+    monthAverage = monthVal/monthCounter
+    print("Average for " + month + ": " + str(monthAverage))
+    PersonTotal = PersonTotal + monthAverage
+    personAverageCounter = personAverageCounter + 1
+personAverage = PersonTotal/personAverageCounter
+print("Average for Person: " + str(personAverage))
+
+#Writing final file for plots
+finalFile = open("finalCSVfile.csv","w")
+finalFile.write(finalString)
+finalFile.close()
+
+plotList = []
+
+with open('finalCSVfile.csv', 'r') as f:
+    reader = csv.reader(f)
+    plotList = list(reader)
 
 
+def mk_float(s):
+    s = s.strip()
+    return float(s) if s else 0
 
+plotArr = np.array ( plotList)
+print(plotArr[1:,averageColumn])
+valueArr = np.array(list(map(mk_float,plotArr[1:,averageColumn])))
+print(len(valueArr))
+#plt.plot(range(0,len(valueArr)) ,valueArr)
+#plt.show()
+
+plt.plot(range(0,len(averageList)),averageList)
+plt.show()
+#String Handling the sleep
 '''
 # Final array not yet in use
 AverageArr = [None] #*len(lines[0].split(','))
@@ -123,5 +162,3 @@ for month in patharr:
 print(sleepDict)
 print(varCount)
 '''
-
-
